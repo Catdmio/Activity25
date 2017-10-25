@@ -1,0 +1,25 @@
+<h1> Sales#done</h1>
+<p>El  registro fue almacenado con éxito!</p>
+
+<table>
+	<tr>
+		<th>id</th>
+		<th>cod</th>
+		<th>value</th>
+		<th>desc</th>
+		<th>detail</th>
+		<th>tax</th>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td> <%= @sale.id %> </td>
+		<td> <%= @sale.cod %> </td>
+		<td> <%= @sale.value %> </td>
+		<td> <%= @sale.discount %> </td>
+		<td> <%= @sale.detail %> </td>
+		<td> <%= @sale.tax %> </td>
+	</tr>
+</table>
+
+<%= link_to 'Volver', sales_new_path %>

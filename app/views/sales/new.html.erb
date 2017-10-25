@@ -1,19 +1,15 @@
-<h1>Crear venta nueva</h1>
+<h1>Sales#new</h1>
 
 <%= form_with model: @sale, url: sales_path, local: true do |form| %>
-<%= form.label :"Detalle Venta" %>
-<%= form.text_area :detail, id: :sale_detail %>
-
-<%= form.label :"Categoria" %>
-<%= form.text_field :category, id: :sale_category %>
-
-<%= form.label :"Valor" %>
-<%= form.number_field :value, id: :sale_value %>
-
-<%= form.label :"Descuento" %>
-<%= form.number_field :discount, id: :sale_discount %>
-
-<%= form.label :"Excento de IVA" %>
+<%= form.label 'Detalle' %>
+<%= form.text_area :detail %>
+<%= form.label 'Categoria'%>
+<%= form.text_field :category %>
+<%= form.label 'Valor' %>
+<%= form.number_field :value %>
+<%= form.label 'Descuento' %>
+<%= form.number_field :discount %>
+<%= form.label 'Excento de IVA' %>
 <%= form.check_box :tax %>
 
 <%= form.submit "Enviar" %>
@@ -22,4 +18,4 @@
 
 
 
-<p>asdf</p>
+<p>(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ ✧ﾟ･: *ヽ(◕ヮ◕ヽ)</p>

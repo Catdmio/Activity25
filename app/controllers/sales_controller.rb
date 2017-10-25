@@ -4,9 +4,9 @@ class SalesController < ApplicationController
   end
 
   def create
-    sale = Sale.new(sale_params)
-    prepare_sale(sale)
-    redirect_to_sales_done_path
+    sale = Sale.new(sales_params)
+    prepare_sales(sale)
+    redirect_to sales_done_path
   end
 
   def done
@@ -21,7 +21,7 @@ private
 
   def prepare_sales(sale)
   	sale.cod = Random.rand(10...100000)
-  	sales.value = (sales_params[:value].to_i) * (100 - sales_params[:discount].to_i)
+  	sale.value = (sales_params[:value].to_i) * (100 - sales_params[:discount].to_i)
   	if sales_params[:tax] == 0
   		sale.total = sale.value * 1,19
   		sale.tax = 19
